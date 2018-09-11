@@ -1,0 +1,443 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@font-face {
+  font-family: oratorstd;
+  src: url("fuentes/OratorStd.otf") format("opentype");
+}
+@font-face {
+  font-family: gothamlight;
+  src: url("fuentes/Gotham-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: gothamBook;
+  src: url("fuentes/Gotham Book Regular.otf");
+}
+/* MENU *************************************************/
+/* BARRA DE NAVEGACION */
+.topnav {
+  font-family: oratorstd;
+  justify-content: space-between;
+  display: flex;
+  overflow: hidden;
+  background-color: transparent;
+  height: 100px;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  color: #00A1BB;
+}
+.topnav a .active {
+  color: #00A1BB;
+}
+
+/* desaparecerlo en movil */
+.topnav-right {
+  display: none;
+}
+
+/* LOGO */
+.logo {
+  background-image: url("logo-dispreh.svg");
+  width: 11rem;
+  height: 70px;
+  /* margin: 2rem, 2rem; */
+  margin-top: 1.3rem;
+  margin-left: 1rem;
+  padding-bottom: 2.2rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+  .topnav {
+    height: 140px;
+  }
+
+  .logo {
+    margin: 2rem, 2rem;
+    margin-left: 2rem;
+  }
+}
+/* 
+  @media only screen and (min-width: 1300px){
+    .topnav{
+        height: 160px;
+    }
+  }
+   */
+/* BOTON DE MENU */
+/* contenedor */
+.btn-menu {
+  margin: 1rem 2rem;
+  padding-top: 1.3rem;
+}
+
+/* boton */
+/* DIMENSIONES DEL LOGO Y MENU IPAD */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .logo {
+    width: 8rem;
+  }
+
+  .btn-menu {
+    padding-top: 2rem;
+  }
+}
+/* DESAPARECER MENU Y MOSTRAR BARRA DE NAVEGACION */
+@media only screen and (min-width: 1100px) {
+  .btn-menu {
+    display: none;
+  }
+
+  .topnav-right {
+    display: block;
+    float: right;
+    padding-top: 2.2rem;
+    padding-right: 2rem;
+  }
+
+  .logo {
+    width: 8rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+  }
+
+  .iconos a {
+    padding-top: 1.65rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+}
+/* @media only screen and (min-width: 1300px){
+    .topnav-right{
+        padding-top: 3.65rem;
+    }
+} */
+/* MENU Y SU ANIMACION */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #28324D;
+  background-color: #28324D;
+  overflow-x: hidden;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+.overlay .closebtn {
+  position: absolute;
+  right: 0px;
+  font-size: 60px;
+  padding-right: 20px;
+}
+.overlay .iconos-menu {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+.overlay .iconos-menu .fa-1x {
+  font-size: 0.6em;
+}
+.overlay .iconos-menu {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+.overlay .overlay-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.overlay .overlay-content a .active {
+  color: #929292;
+}
+.overlay .overlay-content a:hover {
+  color: #929292;
+}
+.overlay .overlay-content a:focus {
+  color: #929292;
+}
+
+/* TAMAÑO DE BOTON DE CERRADO DEL MENU */
+@media only screen and (min-width: 768px) and (max-width: 899px) {
+  .overlay .closebtn {
+    position: absolute;
+    right: 45px;
+    font-size: 80px;
+  }
+}
+/* Encerrar iconos en círculos */
+i.fab {
+  /* margin: 0.5em; */
+  color: white;
+  border: 1px solid #929292;
+  border-radius: 50%;
+  padding: 0.5em;
+  transition: all 0.5s ease;
+  width: 2.1em;
+  text-align: center;
+}
+i.fab:hover {
+  background: #929292;
+}
+
+.portada-fondo {
+  background-image: url("imagenes_nosotros/portadaXL2.png");
+  background-size: cover;
+}
+
+.fila {
+  display: flex;
+}
+.fila .columna:nth-child(1) {
+  flex: 55%;
+  align-content: flex-end;
+}
+.fila .columna:nth-child(2) {
+  flex: 45%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: oratorstd;
+  color: white;
+  font-size: 2vw;
+  padding-top: 14vw;
+}
+.fila .columna2 {
+  font-family: gothamLight;
+  font-size: 14.07px;
+}
+.fila .columna2:nth-child(1) {
+  letter-spacing: 3px;
+  flex: 55%;
+}
+.fila .columna2:nth-child(1) p {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.fila .columna2:nth-child(2) {
+  flex: 45%;
+}
+.fila .columna2 .contenedor-datos {
+  font-family: gothamLight;
+  border: 1px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  margin: 3%;
+  font-size: 12px;
+}
+.fila .columna2 .contenedor-datos p {
+  padding-left: 9%;
+  align-content: space-between;
+  padding-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+}
+.fila .columna2 .contenedor-datos b {
+  color: #00A1BB;
+}
+.fila .columna2:nth-child(2) {
+  background-color: #333333ff;
+}
+.fila .contenedor-cascos {
+  width: 85%;
+  margin-left: 15%;
+}
+
+#titulo {
+  font-size: 28.74px;
+  margin-top: 3rem;
+  font-family: Raleway;
+}
+
+.contactamos {
+  font-family: gothamlight;
+  letter-spacing: 3px;
+  height: 300px;
+}
+.contactamos h1 {
+  font-size: 28.74px;
+  padding-top: 4.5rem;
+  padding-left: 3rem;
+}
+.contactamos p {
+  font-size: 14.07px;
+  padding: 3rem;
+  padding-top: 2.5rem;
+}
+
+.fila3 {
+  display: flex;
+}
+.fila3 .columna:nth-child(1) {
+  flex: 55%;
+}
+.fila3 .columna:nth-child(2) {
+  flex: 45%;
+}
+.fila3 .columna:nth-child(2) input[type=text] {
+  letter-spacing: 3px;
+  width: 80%;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  color: #d9dddf;
+  border-bottom: 1px solid #78797c;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+.fila3 .columna:nth-child(2) input[type=submit] {
+  align-items: center;
+  align-content: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  /* margin-left: 35%; */
+  border: 1px solid;
+  border-color: #333333ff;
+  color: #00A1BB;
+  background: transparent;
+  cursor: pointer;
+  font-family: gothamlight;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  transition: all 0.5s ease;
+  margin-bottom: 1.5rem;
+}
+.fila3 .columna:nth-child(2) input[type=submit]:hover {
+  border-color: #00A1BB;
+  color: #333333ff;
+  background-color: #00A1BB;
+}
+.fila3 .columna .a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fila3 .columna .b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.fila3 .columna .terms {
+  font-family: gothamlight;
+  display: flex;
+  font-size: 12.37px;
+  text-align: center;
+  padding-top: 1rem;
+  font-family: gothamlight;
+  align-items: center;
+  justify-content: center;
+}
+.fila3 .columna .terms span {
+  font-family: gothamlight;
+}
+
+footer {
+  background-color: #333333ff;
+  font-family: gothamlight;
+}
+
+.arriba {
+  display: flex;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-top: 2rem;
+  font-family: oratorstd;
+}
+.arriba .iconos-footer {
+  flex: 43%;
+}
+.arriba .iconos-footer a {
+  padding-right: 1rem;
+}
+.arriba .flecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 40%;
+}
+.arriba .flecha .fas {
+  color: white;
+}
+.arriba .enlaces {
+  display: flex;
+  flex: 43%;
+  justify-content: space-between;
+}
+.arriba .enlaces a {
+  color: white;
+  padding-right: 1.3rem;
+}
+
+.recibe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00A1BB;
+  margin-top: 2rem;
+}
+
+.abajo {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-bottom: 2rem;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.ingresa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.ingresa input[type=text] {
+  background: transparent;
+  letter-spacing: 3px;
+  width: 44%;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+.estimado {
+  background-image: url("logo-dispreh.svg");
+  width: 11rem;
+  height: 70px;
+  /* margin: 2rem, 2rem; */
+  margin-left: 1rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=nosotros.css.map */
